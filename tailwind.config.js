@@ -1,3 +1,5 @@
+const { teardownCrashReporter } = require('next/dist/build/swc')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -12,7 +14,10 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
-    },
+      gridTemplateColumns: {
+        'gallery': 'repeat(auto-fit, minmax(250px, 1fr))',
+      }
+    }
   },
   plugins: [],
 }

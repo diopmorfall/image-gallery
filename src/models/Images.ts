@@ -5,7 +5,7 @@ const BasicImageSchema = z.object({
     per_page: z.number(),
     prev_page: z.string().optional(), //? I can concatenate multiple properties too
     next_page: z.string().optional(),
-    total_result: z.number(),
+    total_results: z.number(),
     //! the names of the properties must match the one in the API response
 })
 
