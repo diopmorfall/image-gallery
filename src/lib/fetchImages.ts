@@ -17,7 +17,7 @@ export async function fetchImages(url: string): Promise<ImagesResults | undefine
 
         //* Data parsing with Zod schemes; if not successful, it'll throw an error
         const parsedData = ImagesSchemaWithPhotos.parse(imagesResults);
-        if(parsedData.total_result === 0) return undefined
+        if(parsedData.total_results === 0) return undefined
         //? total_result is already suggested thanks to the schema
         return parsedData;
     } catch(e){
