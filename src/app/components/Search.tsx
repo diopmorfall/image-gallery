@@ -9,7 +9,7 @@ export default function Search(){
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        router.push(`/results/${search}`)
+        if (search) router.push(`/results/${search}`)
         setSearch("")
     }
 
@@ -20,7 +20,7 @@ export default function Search(){
                 value={search}
                 onChange={e => setSearch(e.target.value)}
                 placeholder="Search"
-                className="bg-white p-2 w-[260px] sm:w-80 text-xl rounded-xl text-black"    
+                className="bg-white p-2 w-[260px] sm:w-80 text-xl rounded-xl text-black outline-none"    
                 autoFocus
             />
         </form>
